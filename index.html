@@ -1,0 +1,52 @@
+<!DOCTYPE html><html>
+<head>
+<meta charset="UTF-8">
+<title>MixelCraft Add-on</title><style>
+body{
+background:#111;
+color:white;
+font-family:Arial;
+text-align:center;
+padding:60px;
+}
+
+button{
+background:#00c853;
+border:none;
+padding:18px 40px;
+font-size:20px;
+color:white;
+border-radius:12px;
+cursor:pointer;
+}
+
+button:hover{
+background:#00e676;
+}
+</style></head><body><h1>MixelCraft Survival Add-on</h1>
+<p>Low Lag Utility Pack</p><button onclick="downloadAddon()">Download Add-on</button>
+
+<script>
+
+function downloadAddon(){
+
+const data = "MixelCraft Addon File";
+
+const blob = new Blob([data], {type:"application/zip"});
+
+const url = URL.createObjectURL(blob);
+
+const a = document.createElement("a");
+
+a.href = url;
+
+a.download = "MixelCraft_v3.zip";
+
+a.click();
+
+URL.revokeObjectURL(url);
+
+}
+
+</script></body>
+</html>
